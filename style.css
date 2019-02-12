@@ -1,0 +1,66 @@
+.ct-chart{
+  position: relative;
+}
+.ct-chart .ct-legend {
+    position: relative;
+    z-index: 10;
+    list-style: none;
+    text-align: center;
+  }
+
+  .ct-chart .ct-legend li {
+    position: relative;
+    padding-left: 23px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .ct-chart .ct-legend li:before {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 0;
+    content: '';
+    border: 3px solid transparent;
+    border-radius: 2px;
+    box-sizing: unset !important;
+  }
+
+  .ct-chart .ct-legend li .inactive:before {
+    background: transparent;
+  }
+  .test::before{
+    background: transparent !important;
+  }
+  .ct-series-a .ct-line{
+    stroke: #8d8887;
+  }
+  .ct-series-a .ct-point{
+    stroke: #8d8887;
+  }
+  .ct-series-b .ct-line{
+    stroke: #F6DC12;
+  }
+  .ct-series-b .ct-point{
+    stroke: #F6DC12;
+  }
+  .ct-chart .ct-label{
+    font-weight: bold;
+  }
+  .ct-chart .ct-legend li:nth-child(1)::before {
+    background-color: #8d8887;
+    border-color: #8d8887;
+  }
+
+  .ct-chart .ct-legend li:nth-child(2)::before {
+    background-color: #F6DC12;
+    border-color: #F6DC12;
+  }
+
+  .ct-chart .ct-legend .ct-legend-inside {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }

@@ -5,68 +5,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>La meillerie d'Agathe</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css">
   <link rel="stylesheet" href="chartist-plugin-tooltip.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
   <script src="js/chartist-plugin-tooltip.js"></script>
   <script src="js/chartist-plugin-legend.js"></script>
-  <style>
-    .ct-chart .ct-legend {
-      position: relative;
-      z-index: 10;
-      list-style: none;
-      text-align: center;
-    }
-
-    .ct-chart .ct-legend li {
-      position: relative;
-      padding-left: 23px;
-      margin-right: 10px;
-      margin-bottom: 3px;
-      cursor: pointer;
-      display: inline-block;
-    }
-
-    .ct-chart .ct-legend li:before {
-      width: 12px;
-      height: 12px;
-      position: absolute;
-      left: 0;
-      content: '';
-      border: 3px solid transparent;
-      border-radius: 2px;
-    }
-
-    .ct-chart .ct-legend li .inactive:before {
-      background: transparent;
-    }
-    .test::before{
-      background: transparent !important;
-    }
-    .ct-chart .ct-legend li:nth-child(1)::before {
-      background-color: #d70206;
-      border-color: #d70206;
-    }
-
-    .ct-chart .ct-legend li:nth-child(2)::before {
-      background-color: #f05b4f;
-      border-color: #f05b4f;
-    }
-
-    .ct-chart .ct-legend .ct-legend-inside {
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-  </style>
+  <script src="js/navbar.js"></script>
 </head>
 
 <body onload="getValue()">
-  <select id="sel" onchange="getValue()">
-  </select>
-  <div class="ct-chart"></div>
+  <nav class="navbar is-light" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-semibold" href="/">
+        La meillerie d'Agathe
+      </a>
+      <div class="navbar-burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+    <div class="navbar-menu" id="navMenu">
+
+      <div class="navbar-end">
+        <a class="navbar-item " href="/blog">
+          Utilisateur
+        </a>
+        <a class="navbar-item" href="/">
+          Recette
+        </a>
+
+        <a class="navbar-item " href="/contact">
+          Blog
+        </a>
+
+        <a class="navbar-item " href="/blog">
+          Acheter
+        </a>
+        <a class="navbar-item is-active" href="/blog">
+          Données extérieurs
+          <img class=" vertical-align" src="/temperature.svg" alt="logo meteo" width="20">
+        </a>
+      </div>
+    </div>
+  </nav>
+  <section class="hero is-light is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Données météorologiques
+        </h1>
+      </div>
+    </div>
+  </section>
+<br>  
+  <div class="columns">
+    <div class="column"></div>
+    <div class="column is-three-quarters">
+      <div class="field">
+        <div class="control has-icons-left">
+          <div class="select is-rounded">
+            <select id="sel" onchange="getValue()">
+            </select>
+          </div>
+          <div class="icon is-small is-left">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+        </div>
+      </div>
+      <div class="ct-chart"></div>
+    </div>
+    <div class="column"></div>
+  </div>
   <script src="js/index.js"></script>
 
 </body>

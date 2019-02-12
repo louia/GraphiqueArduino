@@ -62,6 +62,7 @@ function getValue() {
       }
     },
     height: "500px",
+    width: "102%",
     fullWidth: true,
     plugins: [
       Chartist.plugins.tooltip(),
