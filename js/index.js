@@ -45,13 +45,9 @@ function getValue() {
 
     }
   }
-  // chart.update();
-  console.log(heure);
-  //console.log(tempSelect);
-  console.log(humSelect);
+  
 
-
-
+//création chart
 
   var chart = new Chartist.Line('.ct-chart', {
     labels: heure,
