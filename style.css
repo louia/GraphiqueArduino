@@ -56,9 +56,9 @@
 
   .ct-chart .ct-legend li:nth-child(2)::before {
     background-color: #F6DC12;
-    border-color: #F6DC12;
+    border-color: #f6dc12;
   }
-
+  .has-bg-img { background: url('/banniere.svg')center center; background-size:cover; }
   .ct-chart .ct-legend .ct-legend-inside {
     position: absolute;
     top: 0;
