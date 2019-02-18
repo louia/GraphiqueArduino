@@ -55,7 +55,6 @@ function getValue() {
       tempSelect, humSelect
     ]
   }, {
-    low: 0,
     axisY: {
       labelInterpolationFnc: function (value) {
         return Math.round(value);
